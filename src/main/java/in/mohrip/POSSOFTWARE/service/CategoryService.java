@@ -11,4 +11,6 @@ public interface CategoryService {
     CategoryResponse add(CategoryRequest request);
 
     List<CategoryResponse> read();
+
+    public void delete(String categoryId);
 }
