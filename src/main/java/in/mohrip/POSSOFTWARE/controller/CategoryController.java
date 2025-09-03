@@ -27,14 +27,15 @@ public class CategoryController {
         return categoryService.read();
     }
 
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     @DeleteMapping("/{categoryId}")
     public void remove(@PathVariable String categoryId) {
-        try{
         categoryService.delete(categoryId);
-    } catch (Exception e){}
-            throw new RuntimeException("Category not found with id: " + categoryId);
-        }
+
+
     }
+}
+
 
 
 
